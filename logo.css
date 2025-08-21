@@ -1,0 +1,143 @@
+/* TVH Logo Styles */
+.tvh-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+}
+
+.logo-icon:hover::before {
+    animation: shine 0.6s ease-in-out;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-main {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 0;
+}
+
+.logo-sub {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive logo */
+@media (max-width: 768px) {
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .logo-main {
+        font-size: 1.4rem;
+    }
+    
+    .logo-sub {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tvh-logo {
+        gap: 8px;
+    }
+    
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .logo-main {
+        font-size: 1.2rem;
+    }
+    
+    .logo-sub {
+        font-size: 0.7rem;
+    }
+}
+
+/* Admin logo variant */
+.admin-logo .logo-icon {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+}
+
+.admin-logo .logo-main {
+    color: #2c3e50;
+}
+
+/* Footer logo variant */
+.footer-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.footer-logo .logo-main {
+    font-size: 1.4rem;
+    color: #e74c3c;
+}
+
+.footer-logo .logo-sub {
+    color: #bbb;
+}
+
+/* Favicon style logo for small spaces */
+.favicon-logo {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
