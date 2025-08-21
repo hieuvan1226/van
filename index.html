@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVH Sweater Store - Chuyên Áo Len Cao Cấp</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="logo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="tvh-logo">
+                    <div class="logo-icon">TVH</div>
+                    <div class="logo-text">
+                        <h1 class="logo-main">TVH Sweater Store</h1>
+                        <p class="logo-sub">Chuyên Áo Len Cao Cấp</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Trang Chủ</a></li>
+                    <li><a href="#products">Sản Phẩm</a></li>
+                    <li><a href="#about">Giới Thiệu</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bộ Sưu Tập Sweater Cao Cấp</h2>
+            <p>Khám phá những chiếc áo len đẹp nhất với chất liệu cao cấp, ấm áp cho mùa đông</p>
+            <button class="cta-btn" onclick="scrollToProducts()">Mua Sắm Ngay</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="men">Sweater Nam</button>
+                <button class="filter-btn" data-filter="women">Sweater Nữ</button>
+                <button class="filter-btn" data-filter="accessories">Unisex</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Về TVH Sweater Store</h2>
+                    <p>Chúng tôi chuyên cung cấp các loại áo len cao cấp, từ cashmere đến cotton blend, mang đến sự ấm áp và phong cách cho mùa đông của bạn.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Chất liệu len cao cấp</li>
+                        <li><i class="fas fa-check"></i> Thiết kế đa dạng</li>
+                        <li><i class="fas fa-check"></i> Ấm áp và thoải mái</li>
+                        <li><i class="fas fa-check"></i> Phong cách thời trang</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=400&fit=crop" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên Hệ</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Địa Chỉ</h3>
+                            <p>125nam từ liêm , hà nội</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Điện Thoại</h3>
+                            <p>0377166280</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hieutop0102@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Số điện thoại">
+                    <textarea placeholder="Tin nhắn" rows="5" required></textarea>
+                    <button type="submit">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="tvh-logo footer-logo">
+                        <div class="logo-icon">TVH</div>
+                        <div class="logo-text">
+                            <h3 class="logo-main">TVH Sweater Store</h3>
+                            <p class="logo-sub">Chuyên Áo Len Cao Cấp</p>
+                        </div>
+                    </div>
+                    <p>Chuyên cung cấp áo len cao cấp với chất lượng tốt nhất cho mùa đông.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Kết</h3>
+                    <ul>
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="#about">Giới Thiệu</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul>
+                        <li><a href="#">Chính Sách Đổi Trả</a></li>
+                        <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="#">Chăm Sóc Khách Hàng</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TVH Sweater Store. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="favicon-logo">TVH</div>
+                    <h3>Giỏ Hàng</h3>
+                </div>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Tổng: <span id="cartTotal">0đ</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Đặt Hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="product-modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div id="productModalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
